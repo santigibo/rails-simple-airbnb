@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>All flats</h1>
+  <%= @msg %>
+  <div class="card-grid m-3">
+    <% @flats.each do |f| %>
+      <div class="my-card">
+        <div class="im">
+          <!-- <img src="https://source.unsplash.com/featured/?rooms" alt="flat image"> -->
+        </div>
+        <div class="info d-flex flex-column justify-content-between">
+          <div class="txt">
+            <h4><%= f.name %></h4>
+            <p><%= f.description %></p>
+          </div>
+          <div class="d-flex guests-price ">
+            <i class="fas fa-users mr-2"></i><p class="mr-2"><%= f.number_of_guest %></p>
+            <i class="fas fa-euro-sign mr-2"></i><p class="mr-2"><%= f.price_per_night %></p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-evenly options">
+          <%= link_to 'More info', flat_path(f.id), class: 'text-primary mr-3' %>
+          <%= link_to 'Edit', edit_flat_path(f.id), class: 'text-warning mr-3' %>
+          <%= link_to 'Remove', flat_path(f.id), method: :delete, class: 'text-danger', data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

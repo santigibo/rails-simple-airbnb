@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= @flat.name %></h1>
+  <br>
+  <p><%= @flat.description %></p>
+  <br>
+  <div class="d-flex justify-content-between">
+    <%= link_to 'Back to flats', flats_path %>
+    <%= link_to 'Edit flat', edit_flat_path(@flat.id) %>
+  </div>
+</div>

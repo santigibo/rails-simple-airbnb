@@ -1,0 +1,55 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+// @import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.my-card {
+  box-shadow: 0 0 8px 0 lightgrey;
+  display: grid;
+  grid-template-rows: 180px 1fr 60px;
+}
+
+.im {
+  height: 160px;
+  background-color: white;
+}
+
+// .im > img {
+//   height: 100%;
+// }
+
+.info {
+  background-color: #F8F9FA;
+  padding: 24px;
+}
+
+.options {
+  padding: 16px;
+}
+
+.box {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #F8F9FA;
+  padding: 32px;
+  margin-top: 16px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 0 lightgrey;
+}
+

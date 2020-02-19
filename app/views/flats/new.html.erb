@@ -1,0 +1,14 @@
+<div class="box">
+  <h1>New Flat</h1>
+  <%= simple_form_for(@flat) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guest %>
+    <%= f.input :price_per_night %>
+    <div class="d-flex">
+      <%= f.submit class: 'btn btn-primary'%>
+      <%= link_to 'Cancel', flats_path, class: 'btn btn-danger ml-2' %>
+    </div>
+  <% end %>
+</div>
